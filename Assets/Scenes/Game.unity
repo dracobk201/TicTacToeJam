@@ -2167,25 +2167,31 @@ MonoBehaviour:
   - {fileID: 5152410923958839297, guid: 8b56a196523f02244b046c7aced7eb75, type: 3}
   - {fileID: 5146287468403120939, guid: 585308c82cede8649b05da0d4bf884f4, type: 3}
   boardParent: {fileID: 2060720609}
-  PlayerOneTotalWins:
+  ActivePlayer:
     UseVariable: 1
     ConstantValue: 0
-    Variable: {fileID: 11400000, guid: 00bf9dfe8bbda4649bc7331c90c952c2, type: 2}
-  PlayerTwoTotalWins:
-    UseVariable: 1
-    ConstantValue: 0
-    Variable: {fileID: 11400000, guid: fc4412cd818248547af4d9c9010b17af, type: 2}
+    Variable: {fileID: 11400000, guid: a6f69e0af370a3f40b524c0b9c776c18, type: 2}
   TotalTies:
     UseVariable: 1
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: d70a592533de5014f9e51dac58c2bd9c, type: 2}
-  PlayerOneWin: {fileID: 11400000, guid: ee3f8b1af02cfbb459f291e222bd25e1, type: 2}
-  PlayerTwoWin: {fileID: 11400000, guid: 33ee5a9470eaed646b6c07d62318340e, type: 2}
   TieGame: {fileID: 11400000, guid: f842536479a536e4ab152b431164e4f3, type: 2}
   TimeOfTheGame:
     UseVariable: 1
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: 63696097a4ee6f84bb08e85006d50d1d, type: 2}
+  PlayerOneTotalWins:
+    UseVariable: 1
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: 00bf9dfe8bbda4649bc7331c90c952c2, type: 2}
+  PlayerOneWin: {fileID: 11400000, guid: ee3f8b1af02cfbb459f291e222bd25e1, type: 2}
+  PlayerOneStatus: {fileID: 2072308093}
+  PlayerTwoTotalWins:
+    UseVariable: 1
+    ConstantValue: 0
+    Variable: {fileID: 11400000, guid: fc4412cd818248547af4d9c9010b17af, type: 2}
+  PlayerTwoWin: {fileID: 11400000, guid: 33ee5a9470eaed646b6c07d62318340e, type: 2}
+  PlayerTwoStatus: {fileID: 1035395086}
 --- !u!114 &903721558
 MonoBehaviour:
   m_ObjectHideFlags: 0

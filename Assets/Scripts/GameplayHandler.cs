@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GameplayHandler : MonoBehaviour
 {
-    [Header("Data Variables")]
+    [Header("General Variables")]
     [SerializeField]
     private Slot[] slots;
     [SerializeField]
@@ -16,19 +16,27 @@ public class GameplayHandler : MonoBehaviour
     [SerializeField]
     private IntReference ActivePlayer;
     [SerializeField]
-    private IntReference PlayerOneTotalWins;
-    [SerializeField]
-    private IntReference PlayerTwoTotalWins;
-    [SerializeField]
     private IntReference TotalTies;
-    [SerializeField]
-    private GameEvent PlayerOneWin;
-    [SerializeField]
-    private GameEvent PlayerTwoWin;
     [SerializeField]
     private GameEvent TieGame;
     [SerializeField]
     private FloatReference TimeOfTheGame;
+
+    [Header("Player 1 Variables")]
+    [SerializeField]
+    private IntReference PlayerOneTotalWins;
+    [SerializeField]
+    private GameEvent PlayerOneWin;
+    [SerializeField]
+    private Text PlayerOneStatus;
+
+    [Header("Player 2 Variables")]
+    [SerializeField]
+    private IntReference PlayerTwoTotalWins;
+    [SerializeField]
+    private GameEvent PlayerTwoWin;
+    [SerializeField]
+    private Text PlayerTwoStatus;
 
     private bool[,] boardXSituation;
     private bool[,] boardOSituation;
@@ -45,6 +53,7 @@ public class GameplayHandler : MonoBehaviour
         InstantiateBoard();
         RestartSlots();
         ActivePlayer.Value = 1;
+        CheckPlayerActive();
     }
 
     private void RestartSlots()
@@ -144,5 +153,26 @@ public class GameplayHandler : MonoBehaviour
         else if (array[2, 0] && array[2, 1] && array[2, 2])
             value = true;
         return value;
+    }
+
+    public void CheckPlayerActive()
+    {
+        PlayerOneStatus.text = "P1: " + PlayerOneTotalWins.Value + " wins";
+        PlayerTwoStatus.text = "P2: " + PlayerTwoTotalWins.Value + " wins";
+        if (ActivePlayer.Value == 1)
+        {
+            PlayerOneStatus.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+            PlayerTwoStatus.transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        else if (ActivePlayer.Value == 2)
+        {
+            PlayerOneStatus.transform.localScale = new Vector3(1f, 1f, 1f);
+            PlayerTwoStatus.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+        }
+        else if (ActivePlayer.Value == 0)
+        {
+            PlayerOneStatus.transform.localScale = new Vector3(1f, 1f, 1f);
+            PlayerTwoStatus.transform.localScale = new Vector3(1f, 1f, 1f);
+        }
     }
 }

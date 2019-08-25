@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6afd874ab16a4474a989d8ef494fad3c, type: 3}
   m_Name: Change Scene
   m_EditorClassIdentifier: 
-  Description: 
+  Description: Notifica que se va a hacer un cambio de escena.
