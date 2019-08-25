@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0224c4e955acd93489bd88e4aefbc935, type: 3}
   m_Name: SFX Volume
   m_EditorClassIdentifier: 
-  Value: 0
-  Description: 
+  Value: 0.4436229
+  Description: Indica el volumen de los efectos de sonido.

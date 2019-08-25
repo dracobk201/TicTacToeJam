@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Scene To Change
   m_EditorClassIdentifier: 
   Value: 
-  Description: 
+  Description: Indica la escena a la que se va a cambiar.

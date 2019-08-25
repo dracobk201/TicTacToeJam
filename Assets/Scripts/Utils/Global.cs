@@ -3,7 +3,7 @@
 public static class Global
 {
     #region Tags
-
+    public const string BoardTag = "Board";
     #endregion
 
     #region Axis
@@ -19,4 +19,8 @@ public static class Global
 
     #endregion
 
+}
+
+public enum SlotState {
+    Null, X, O
 }
