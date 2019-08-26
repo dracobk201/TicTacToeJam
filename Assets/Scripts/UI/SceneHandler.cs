@@ -13,8 +13,6 @@ public class SceneHandler : MonoBehaviour
     private bool isChangingSceneNow;
     private float SceneChangingProgress;
 
-    private AsyncOperation sceneProgress;
-
     public void SwitchScene()
     {
         StartCoroutine(ChangingScene());
@@ -31,7 +29,7 @@ public class SceneHandler : MonoBehaviour
             ShowSceneLoading.Raise();
             yield return new WaitForSeconds(0.2f);
 
-            sceneProgress = SceneManager.LoadSceneAsync(SceneToChange.Value, LoadSceneMode.Single);
+            AsyncOperation sceneProgress = SceneManager.LoadSceneAsync(SceneToChange.Value);
             sceneProgress.allowSceneActivation = false;
 
             while (!sceneProgress.isDone)
