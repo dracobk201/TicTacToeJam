@@ -8,6 +8,8 @@ public class OptionsMainMenuActions : MonoBehaviour
     [Header("Data Variables")]
     public FloatReference MusicVolume;
     public FloatReference SoundVolume;
+    public GameEvent MusicRefreshed;
+    public GameEvent SoundRefreshed;
 
     [Header("Panel Variables")]
     public Slider soundSlider;
@@ -24,10 +26,12 @@ public class OptionsMainMenuActions : MonoBehaviour
     public void SoundChanged()
     {
         SoundVolume.Value = soundSlider.value;
+        SoundRefreshed.Raise();
     }
 
     public void MusicChanged()
     {
         MusicVolume.Value = musicSlider.value;
+        MusicRefreshed.Raise();
     }
 }

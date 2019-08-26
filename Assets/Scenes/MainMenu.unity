@@ -2545,6 +2545,8 @@ MonoBehaviour:
     UseVariable: 1
     ConstantValue: 0
     Variable: {fileID: 11400000, guid: df2040c1431cf0245af45cb5611087e7, type: 2}
+  MusicRefreshed: {fileID: 11400000, guid: 78c13ef9ca938704f83112dbed986ad9, type: 2}
+  SoundRefreshed: {fileID: 11400000, guid: f28159685d3833c49b0916ffcb2c3d29, type: 2}
   soundSlider: {fileID: 1125477640}
   musicSlider: {fileID: 1698768383}
 --- !u!1 &1596407432
@@ -4120,17 +4122,17 @@ PrefabInstance:
     - target: {fileID: 6277920954905599520, guid: 48f5f9be54ac25f49ae5772bc4dc09bb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 280.81042
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6277920954905599520, guid: 48f5f9be54ac25f49ae5772bc4dc09bb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 547.8821
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6277920954905599520, guid: 48f5f9be54ac25f49ae5772bc4dc09bb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -210.39116
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6277920954905599520, guid: 48f5f9be54ac25f49ae5772bc4dc09bb,
         type: 3}
